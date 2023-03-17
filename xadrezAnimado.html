@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Xadrez</title>
+<style>
+   td {
+   	  border: 1px solid black;
+   	  width: 65px;
+   	  height: 65px;
+   	  font-size: 60px;
+   	  text-align: center;
+   }
+   
+   table {
+   	 margin: auto;  
+   	 border-collapse: collapse;
+   }
+   
+   tr:nth-child(even) td:nth-child(odd), tr:nth-child(odd) td:nth-child(even){
+      background-color: gray;
+   }
+</style>
+<script>
+function allowDrop(ev) {
+	ev.preventDefault();
+}
+
+function drag(ev) {
+	ev.dataTransfer.setData("id", ev.target.id);
+}
+
+function drop(ev) {
+	ev.preventDefault();
+	var data=ev.dataTransfer.getData("id");
+	ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+   <table>
+      <tr>
+        <td id="11" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="tp1" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="12" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="cp1" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="13" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="bp1" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="14" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="tp1" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="15" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="queenp" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="16" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="kingp" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="17" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="cp2" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+        <td id="18" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="tp2" draggable="true" ondragstart="drag(event)">&#9818;</span></td>
+      </tr>
+      <tr>
+        <td id="21" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="22" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="23" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="24" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="25" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="26" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="27" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="28" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      </tr>
+      <tr>
+        <td id="31" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="32" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="33" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="34" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="35" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="36" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="37" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="38" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      </tr>
+      <tr>
+        <td id="41" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="42" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="43" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="44" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="45" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="46" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="47" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="48" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      </tr>
+      <tr>
+        <td id="51" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="52" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="53" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="54" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="55" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="56" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="57" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="58" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      </tr>
+      <tr>
+        <td id="61" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="62" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="63" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="64" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="65" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="66" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="67" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td id="68" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      </tr>
+      
+      <tr>
+        <td id="71" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb1" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="72" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb2" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="73" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb3" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="74" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb4" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="75" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb5" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="76" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb6" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="77" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb7" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+        <td id="78" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="pb8" draggable="true" ondragstart="drag(event)">&#9817;</span></td>
+      </tr>
+      <tr>
+        <td id="81" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="tb1" draggable="true" ondragstart="drag(event)">&#9814;</span></td>
+        <td id="82" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="cb1" draggable="true" ondragstart="drag(event)">&#9816;</span></td>
+        <td id="83" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="bb1" draggable="true" ondragstart="drag(event)">&#9815;</span></td>
+        <td id="84" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="queenb" draggable="true" ondragstart="drag(event)">&#9813;</span></td>
+        <td id="85" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="kingb" draggable="true" ondragstart="drag(event)">&#9812;</span></td>
+        <td id="86" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="bb2" draggable="true" ondragstart="drag(event)">&#9815;</span></td>
+        <td id="87" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="cb2" draggable="true" ondragstart="drag(event)">&#9816;</span></td>
+        <td id="88" ondrop="drop(event)" ondragover="allowDrop(event)"><span id="tb2" draggable="true" ondragstart="drag(event)">&#9814;</span></td>
+      </tr>
+     
+   </table>
+   <p><br/></p>
+    <table>
+      <tr><td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td ondrop="drop(event)" ondragover="allowDrop(event)"></td></tr>   
+      <tr><td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+        <td ondrop="drop(event)" ondragover="allowDrop(event)"></td></tr>   
+        <tr><td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+          <td ondrop="drop(event)" ondragover="allowDrop(event)"></td></tr>   
+    
+    </table>  
+   <h3>TODO</h3>
+   <dl>
+	 <dt>eliminar peça quando é capturada</dt>
+	    <dd>modificar a função drop para limpar a propriedade innerHTML do elemento de destino (target)</dd>  
+	 <dt>promoção de peças</dt>
+        <dd>colocar peças que foram capturadas ao lado do tabuleiro pode resolver o problema</dd>
+     <dt>contador de tempo</dt>
+        <dd>implementar um contador regressivo de tempo para cada jogada</dd>
+     <dt>impedir captura inválida</dt>
+        <dd>solução da promoção resolve o problema, basta voltar a peça e os movimentos</dd>   
+   </dl>
+
+</body>
+</html>
